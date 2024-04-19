@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -91,4 +94,8 @@ html {
     color: #000000;
     margin-top: 10px;
     text-align: center;
+}
+
+.text-header {
+    color: #297202;
 }
