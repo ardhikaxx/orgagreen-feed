@@ -33,8 +33,10 @@ window.onscroll = function () {
 
     if (window.pageYOffset > sticky) {
         ud_header.classList.add("sticky");
+        ud_header.style.backgroundColor = '#fafafa';
     } else {
         ud_header.classList.remove("sticky");
+        ud_header.style.backgroundColor = 'transparent'; 
     }
 
     if (ud_header.classList.contains("sticky")) {
