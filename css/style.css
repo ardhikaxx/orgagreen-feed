@@ -78,6 +78,15 @@ html {
     padding: 20px 25px;
 }
 
+.btn-more {
+    border: none;
+    background-color: #297202 !important;
+    color: #fafafa !important;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
 .navbar-brand img {
     width: auto;
     height: 50px;
@@ -98,4 +107,16 @@ html {
 
 .text-header {
     color: #297202;
+}
+
+.img-artikel img {
+    width: 100%;
+    height: auto; 
+}
+
+.ellipsis-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }

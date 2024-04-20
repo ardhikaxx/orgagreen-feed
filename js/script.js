@@ -9,7 +9,7 @@ buttons.forEach(button => {
         Swal.fire({
             icon: 'info',
             iconColor: '#297202',
-            title: 'Info',
+            title: 'Info Detail',
             html: `
                 <img loading="lazy" alt="" class="img-fluid rounded" src="${imgSrc}">
                 <p class="paragraf">${paragraph}</p>
