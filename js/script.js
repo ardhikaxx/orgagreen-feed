@@ -3,8 +3,9 @@ const buttons = document.querySelectorAll('.btn-produk');
 buttons.forEach(button => {
     button.addEventListener('click', function () {
         const imageItem = this.closest('.image-item');
-        const paragraph = imageItem.querySelector('.paragraf').textContent;
+        const paragraph = imageItem.querySelector('.paragraf').innerText;
         const imgSrc = this.getAttribute('data-img-src');
+        const hargaList = imageItem.querySelector('.list-harga').innerHTML;
 
         Swal.fire({
             icon: 'info',
@@ -13,6 +14,7 @@ buttons.forEach(button => {
             html: `
                 <img loading="lazy" alt="" class="img-fluid rounded" src="${imgSrc}">
                 <p class="paragraf">${paragraph}</p>
+                <p><strong>Harga:</strong> ${hargaList}</p>
             `,
             confirmButtonColor: '#297202',
             confirmButtonText: 'Tutup',
@@ -20,6 +22,7 @@ buttons.forEach(button => {
         });
     });
 });
+
 
 
 window.onscroll = function () {
@@ -59,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollReveal().reveal('#about .text-about', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
 
     ScrollReveal().reveal('#produk', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#produk h2, #produk p', { interval: 100, delay: 300, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#produk .carousel, #produk .carousel-item', { delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
 
     ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
     ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });

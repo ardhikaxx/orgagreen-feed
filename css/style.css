@@ -87,6 +87,15 @@ html {
     padding: 20px 25px;
 }
 
+.btn-message {
+    border: none;
+    background-color: #297202 !important;
+    color: #fafafa !important;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
 .navbar-brand img {
     width: auto;
     height: 50px;
@@ -111,7 +120,7 @@ html {
 
 .img-artikel img {
     width: 100%;
-    height: auto; 
+    height: auto;
 }
 
 .ellipsis-text {
@@ -129,9 +138,9 @@ html {
     padding-top: 40px;
     font-family: "Poppins", sans-serif;
     justify-content: center;
-  }
-  
-  .wrapper .icon {
+}
+
+.wrapper .icon {
     position: relative;
     background: #fff;
     border-radius: 50%;
@@ -146,9 +155,9 @@ html {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip {
+}
+
+.wrapper .tooltip {
     position: absolute;
     top: 0;
     font-size: 14px;
@@ -160,9 +169,9 @@ html {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip::before {
+}
+
+.wrapper .tooltip::before {
     position: absolute;
     content: "";
     height: 8px;
@@ -172,38 +181,58 @@ html {
     left: 50%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .icon:hover .tooltip {
+}
+
+.wrapper .icon:hover .tooltip {
     top: -45px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-  }
-  
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
     background: #1877f2;
     color: #fff;
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
     background: #1da1f2;
     color: #fff;
-  }
-  
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
     background: #e4405f;
     color: #fff;
-  }
-  
+}
+
+.text-menu {
+    color: #fafafa;
+}
+
+.text-menu:hover {
+    color: #3fb002;
+}
+
+.text-footer {
+    color: #e7e7e7;
+}
+
+.list-harga {
+    list-style-position: inside; /* Menjadikan titik berada di dalam kotak */
+    padding-left: 0; /* Menghapus padding kiri default */
+}
+
+.list-harga li {
+    margin-bottom: 5px; /* Mengatur jarak antara setiap item dalam daftar */
+}
