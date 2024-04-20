@@ -50,3 +50,19 @@ window.onscroll = function () {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    ScrollReveal().reveal('#home .container', { delay: 250, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#home h1, #home p, #home a', { interval: 200, delay: 300, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#about', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#about .text-about', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#produk', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#produk h2, #produk p', { interval: 100, delay: 300, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#produk .carousel, #produk .carousel-item', { delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#artikel .card', { interval: 150, delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+});
