@@ -133,6 +133,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var targetElement = document.getElementById(targetId);
 
         targetElement.scrollIntoView({ behavior: 'smooth' });
+
+        var allSections = document.querySelectorAll('section');
+        allSections.forEach(function(section) {
+            if (section.id !== targetId) {
+                section.style.display = 'none';
+            } else {
+                section.style.display = 'block';
+            }
+        });
     }
 
     var menuLinks = document.querySelectorAll('.nav-link');
