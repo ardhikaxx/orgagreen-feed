@@ -120,6 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
     ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
     ScrollReveal().reveal('#artikel .card', { interval: 150, delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#contact', { delay: 300, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#contact .text-header, #contact p', { delay: 350, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#contact form', { delay: 400, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#contact button', { delay: 450, duration: 800, distance: '20px', origin: 'top', easing: 'ease-in-out', reset: true });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
