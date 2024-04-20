@@ -23,53 +23,6 @@ buttons.forEach(button => {
     });
 });
 
-
-
-window.onscroll = function () {
-    const ud_header = document.querySelector(".ud-header");
-    const sticky = ud_header.offsetTop;
-    const logo = document.querySelector(".navbar-brand img");
-    const textMenus = document.querySelectorAll(".nav-link");
-
-    if (window.pageYOffset > sticky) {
-        ud_header.classList.add("sticky");
-        ud_header.style.backgroundColor = '#fafafa';
-    } else {
-        ud_header.classList.remove("sticky");
-        ud_header.style.backgroundColor = 'transparent'; 
-    }
-
-    if (ud_header.classList.contains("sticky")) {
-        logo.src = "./assets/Logo komersil.png";
-        textMenus.forEach(menu => {
-            menu.style.color = "#297202";
-        });
-    } else {
-        logo.src = "./assets/Logo komersil2.png";
-        textMenus.forEach(menu => {
-            menu.style.color = "#fafafa";
-        });
-    }
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    ScrollReveal().reveal('#home .container', { delay: 250, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#home h1, #home p, #home a', { interval: 200, delay: 300, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
-
-    ScrollReveal().reveal('#about', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#about .text-about', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
-
-    ScrollReveal().reveal('#produk', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
-
-    ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
-    ScrollReveal().reveal('#artikel .card', { interval: 150, delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
-});
-
 const linkWhatsApp = 'https://wa.me/6282269674325';
 function sendWhatsAppMessage(nama, pesan) {
     const confirmMessage = `Kirim pesan ke WhatsApp dengan nama "${nama}" dan pesan "${pesan}"?`;
@@ -122,6 +75,51 @@ document.getElementById('kirim').addEventListener('click', function () {
     } else {
         sendWhatsAppMessage(nama, pesan);
     }
+});
+
+window.onscroll = function () {
+    const ud_header = document.querySelector(".ud-header");
+    const sticky = ud_header.offsetTop;
+    const logo = document.querySelector(".navbar-brand img");
+    const textMenus = document.querySelectorAll(".nav-link");
+
+    if (window.pageYOffset > sticky) {
+        ud_header.classList.add("sticky");
+        ud_header.style.backgroundColor = '#fafafa';
+    } else {
+        ud_header.classList.remove("sticky");
+        ud_header.style.backgroundColor = 'transparent'; 
+    }
+
+    if (ud_header.classList.contains("sticky")) {
+        logo.src = "./assets/Logo komersil.png";
+        textMenus.forEach(menu => {
+            menu.style.color = "#297202";
+        });
+    } else {
+        logo.src = "./assets/Logo komersil2.png";
+        textMenus.forEach(menu => {
+            menu.style.color = "#fafafa";
+        });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    ScrollReveal().reveal('#home .container', { delay: 250, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#home h1, #home p, #home a', { interval: 200, delay: 300, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#about', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#about .text-about', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#produk', { delay: 400, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+
+    ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
+    ScrollReveal().reveal('#artikel .card', { interval: 150, delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
