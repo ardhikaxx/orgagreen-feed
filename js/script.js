@@ -50,7 +50,7 @@ window.onscroll = function () {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
@@ -66,4 +66,58 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollReveal().reveal('#artikel', { delay: 200, duration: 800, distance: '50px', origin: 'top', easing: 'ease-in-out', reset: true });
     ScrollReveal().reveal('#artikel .text-center', { delay: 250, duration: 800, distance: '40px', origin: 'top', easing: 'ease-in-out', reset: true });
     ScrollReveal().reveal('#artikel .card', { interval: 150, delay: 350, duration: 800, distance: '30px', origin: 'top', easing: 'ease-in-out', reset: true });
+});
+
+const linkWhatsApp = 'https://wa.me/6282269674325';
+function sendWhatsAppMessage(nama, pesan) {
+    const confirmMessage = `Kirim pesan ke WhatsApp dengan nama "${nama}" dan pesan "${pesan}"?`;
+
+    Swal.fire({
+        title: "Kirim Pesan WhatsApp",
+        text: confirmMessage,
+        icon: "info",
+        iconColor: '#297202',
+        showCancelButton: true,
+        confirmButtonText: "Ya, Kirim",
+        confirmButtonColor: '#297202',
+        cancelButtonText: "Batal"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const encodedNama = encodeURIComponent(nama);
+            const encodedPesan = encodeURIComponent(pesan);
+            const whatsappLink = `${linkWhatsApp}?text=Halo%20${encodedNama},%20${encodedPesan}`;
+
+            window.location.href = whatsappLink;
+        }
+    });
+}
+
+document.getElementById('kirim').addEventListener('click', function () {
+    const nama = document.getElementById('nama').value.trim();
+    const pesan = document.getElementById('pesan').value.trim();
+
+    if (nama === '' && pesan !== '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal!',
+            text: 'Mohon masukkan nama Anda.',
+            confirmButtonColor: '#297202'
+        });
+    } else if (nama !== '' && pesan === '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal!',
+            text: 'Mohon masukkan pesan Anda.',
+            confirmButtonColor: '#297202'
+        });
+    } else if (nama === '' && pesan === '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal!',
+            text: 'Mohon isi nama dan pesan terlebih dahulu.',
+            confirmButtonColor: '#297202'
+        });
+    } else {
+        sendWhatsAppMessage(nama, pesan);
+    }
 });

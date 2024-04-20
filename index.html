@@ -330,48 +330,6 @@
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
-    <script>
-        const linkWhatsApp = 'https://wa.me/6282269674325';
-
-        // Function to handle sending WhatsApp message
-        function sendWhatsAppMessage(nama, pesan) {
-            const confirmMessage = `Kirim pesan ke WhatsApp dengan nama "${nama}" dan pesan "${pesan}"?`;
-
-            swal({
-                title: "Kirim Pesan WhatsApp",
-                text: confirmMessage,
-                icon: "info",
-                buttons: {
-                    cancel: "Batal",
-                    confirm: {
-                        text: "Ya, Kirim",
-                        value: "send"
-                    }
-                },
-            })
-            .then((value) => {
-                if (value === "send") {
-                    const encodedNama = encodeURIComponent(nama);
-                    const encodedPesan = encodeURIComponent(pesan);
-                    const whatsappLink = `${linkWhatsApp}?text=Halo%20${encodedNama},%20${encodedPesan}`;
-
-                    window.location.href = whatsappLink;
-                }
-            });
-        }
-
-        // Event listener for sending message button
-        document.getElementById('kirim').addEventListener('click', function() {
-            const nama = document.getElementById('nama').value.trim();
-            const pesan = document.getElementById('pesan').value.trim();
-
-            if (nama === '' || pesan === '') {
-                swal("Gagal!", "Mohon isi nama dan pesan terlebih dahulu.", "error");
-            } else {
-                sendWhatsAppMessage(nama, pesan);
-            }
-        });
-    </script>
 </body>
 
 </html>
