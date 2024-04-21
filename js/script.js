@@ -82,13 +82,17 @@ window.onscroll = function () {
     const sticky = ud_header.offsetTop;
     const logo = document.querySelector(".navbar-brand img");
     const textMenus = document.querySelectorAll(".nav-link");
+    const navbarTogglerIcon = document.querySelector(".fa-bars");
 
     if (window.pageYOffset > sticky) {
         ud_header.classList.add("sticky");
         ud_header.style.backgroundColor = '#fafafa';
     } else {
         ud_header.classList.remove("sticky");
-        ud_header.style.backgroundColor = 'transparent'; 
+        ud_header.style.backgroundColor = 'rgba(75, 75, 75, 0.1)';
+        ud_header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        ud_header.style.backdropFilter = 'blur(6.4px)';
+        ud_header.style.webkitBackdropFilter = 'blur(6.4px)';
     }
 
     if (ud_header.classList.contains("sticky")) {
@@ -96,11 +100,15 @@ window.onscroll = function () {
         textMenus.forEach(menu => {
             menu.style.color = "#297202";
         });
+
+        navbarTogglerIcon.style.color = "#297202";
     } else {
         logo.src = "./assets/Logo komersil2.png";
         textMenus.forEach(menu => {
             menu.style.color = "#fafafa";
         });
+
+        navbarTogglerIcon.style.color = "#fafafa";
     }
 };
 
